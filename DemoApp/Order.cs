@@ -2,7 +2,7 @@ namespace DemoApp;
 
 public class Order
 {
-    private List<OrderLineItem> OrderLineItems { get; set; } = new();
+    public List<OrderLineItem> OrderLineItems { get; private set; } = new();
 
 
     public void AddOrderLineItem(OrderLineItem orderLineItem)
