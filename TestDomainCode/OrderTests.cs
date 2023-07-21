@@ -38,6 +38,17 @@ public class OrderTests
         
         // Assert
         Assert.Single(order.OrderLineItems);
+    }
+
+    [Fact]
+    public void TestAddOrderLineItemContainsCorrectItem()
+    {
+        // Arrange
+        var lineItem1 = new OrderLineItem { ProductName = "Product 1", Quantity = 1, Price = 1 };
+        var order = new Order();
+
+        // Act
+        order.AddOrderLineItem(lineItem1);
 
         // Assert that lineItem1 is in the OrderLineItems collection
         Assert.Contains(lineItem1, order.OrderLineItems);
