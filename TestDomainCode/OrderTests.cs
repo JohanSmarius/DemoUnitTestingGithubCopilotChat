@@ -12,8 +12,11 @@ public class OrderTests
         // Arrange
         var order = CreateOrderWithLineItems();
 
+        // Act
+        var totalPrice = order.TotalPrice;
+
         // Assert
-        Assert.Equal(50, order.TotalPrice);
+        Assert.Equal(50, totalPrice);
     }
 
 
